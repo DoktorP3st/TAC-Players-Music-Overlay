@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Now Playing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="player" class="player hidden">
+    <div class="cover-wrap">
+      <img id="cover" src="../data/cover.jpg" alt="cover">
+    </div>
+    <div class="info">
+      <div class="track-title" id="title">—</div>
+      <div class="track-artist" id="artist">—</div>
+      <div class="progress-wrap">
+        <div class="progress-bar">
+          <div class="progress-fill" id="fill"></div>
+        </div>
+        <div class="times">
+          <span id="pos">0:00</span>
+          <span id="dur">0:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

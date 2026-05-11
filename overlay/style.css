@@ -1,0 +1,81 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: transparent;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  width: 420px;
+  transition: opacity 0.4s ease;
+}
+
+.player.hidden { opacity: 0; pointer-events: none; }
+
+.cover-wrap {
+  flex-shrink: 0;
+  width: 72px; height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.cover-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.info { flex: 1; min-width: 0; }
+
+.track-title {
+  color: #f4f4f5;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 3px;
+}
+
+.track-artist {
+  color: #a78bfa;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7c3aed;
+  border-radius: 3px;
+  transition: width 0.5s linear;
+  width: 0%;
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  color: #71717a;
+  font-size: 10px;
+}

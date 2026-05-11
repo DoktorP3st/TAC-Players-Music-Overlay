@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/now_playing.json
+data/cover.jpg
+.env
+*.tmp
