@@ -1,5 +1,19 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+:root {
+  --ov-bg:          rgba(10, 10, 10, 0.82);
+  --ov-blur:        20px;
+  --ov-radius:      16px;
+  --ov-width:       420px;
+  --ov-accent:      #7c3aed;
+  --ov-title:       #f4f4f5;
+  --ov-artist:      #a78bfa;
+  --ov-title-size:  15px;
+  --ov-artist-size: 12px;
+  --ov-transition:  0.3s;
+  --ov-border:      rgba(255, 255, 255, 0.08);
+}
+
 body {
   background: transparent;
   font-family: 'Segoe UI', system-ui, sans-serif;
@@ -11,13 +25,13 @@ body {
   align-items: center;
   gap: 14px;
   padding: 14px 18px;
-  background: rgba(10, 10, 10, 0.82);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  width: 420px;
-  transition: opacity 0.4s ease;
+  background: var(--ov-bg);
+  backdrop-filter: blur(var(--ov-blur));
+  -webkit-backdrop-filter: blur(var(--ov-blur));
+  border: 1px solid var(--ov-border);
+  border-radius: var(--ov-radius);
+  width: var(--ov-width);
+  transition: opacity var(--ov-transition) ease;
 }
 
 .player.hidden { opacity: 0; pointer-events: none; }
@@ -33,14 +47,14 @@ body {
 .cover-wrap img {
   width: 100%; height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--ov-transition) ease;
 }
 
 .info { flex: 1; min-width: 0; }
 
 .track-title {
-  color: #f4f4f5;
-  font-size: 15px;
+  color: var(--ov-title);
+  font-size: var(--ov-title-size);
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
@@ -49,8 +63,8 @@ body {
 }
 
 .track-artist {
-  color: #a78bfa;
-  font-size: 12px;
+  color: var(--ov-artist);
+  font-size: var(--ov-artist-size);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -67,7 +81,7 @@ body {
 
 .progress-fill {
   height: 100%;
-  background: #7c3aed;
+  background: var(--ov-accent);
   border-radius: 3px;
   transition: width 0.5s linear;
   width: 0%;

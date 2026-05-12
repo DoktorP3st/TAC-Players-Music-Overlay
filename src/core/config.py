@@ -18,7 +18,23 @@ class AppConfig:
     repeat: str               = "off"          # "off" | "one" | "all"
     overlay_port: int         = 8080
     accent_color: str         = "#7c3aed"
-    window_geometry: str      = "1000x680+80+80"
+    window_geometry: str      = "1120x700+80+80"
+
+    # Overlay visual settings
+    ov_opacity: float    = 0.82
+    ov_blur: int         = 20
+    ov_bg: str           = "#0a0a0a"
+    ov_radius: int       = 16
+    ov_width: int        = 420
+    ov_accent: str       = "#7c3aed"
+    ov_title_color: str  = "#f4f4f5"
+    ov_artist_color: str = "#a78bfa"
+    ov_title_size: int   = 15
+    ov_artist_size: int  = 12
+    ov_show_cover: bool  = True
+    ov_show_progress: bool = True
+    ov_transition: float = 0.3
+    ov_theme: str        = "glassmorphism"
 
     def save(self) -> None:
         _path().parent.mkdir(parents=True, exist_ok=True)

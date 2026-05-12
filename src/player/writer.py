@@ -15,6 +15,7 @@ def write_now_playing(
     shuffle: bool,
     repeat: str,
     track_id: int = 0,
+    visual: dict | None = None,
 ) -> None:
     d = data_dir()
     d.mkdir(parents=True, exist_ok=True)
@@ -42,6 +43,8 @@ def write_now_playing(
         "repeat":    repeat,
         "track_id":  track_id,
     }
+    if visual:
+        payload["visual"] = visual
     tmp = d / "now_playing.tmp"
     tmp.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
     tmp.replace(d / "now_playing.json")
