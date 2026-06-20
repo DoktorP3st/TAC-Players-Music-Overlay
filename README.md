@@ -193,6 +193,6 @@ TAC-Players-Music-Overlay/
 
 <div align="center">
 
-Développé par **Pestovich**
+Développé par **Pestovich** · 🎮 [twitch.tv/Pestovich](https://twitch.tv/Pestovich)
 
 </div>
