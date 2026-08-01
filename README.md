@@ -180,8 +180,8 @@ TAC-Players-Music-Overlay/
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/Pestovich">
-        <img src="https://github.com/Pestovich.png" width="80px" alt="Pestovich"/><br/>
+      <a href="https://github.com/Lekarov">
+        <img src="https://github.com/Lekarov.png" width="80px" alt="Pestovich"/><br/>
         <sub><b>Pestovich</b></sub>
       </a><br/>
       <sub>Créateur & développeur principal</sub>
